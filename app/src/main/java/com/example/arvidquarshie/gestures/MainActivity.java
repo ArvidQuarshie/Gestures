@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         public boolean onScale(ScaleGestureDetector detector) {
             scale *= detector.getScaleFactor();
 
-            //finds the ratio dimensions for increasing the images once a gesture is done
+            //translation of the image based on the factor described below
             scale = Math.max(0.1f, Math.min(scale, 5.0f));
             matrix.setScale(scale, scale);
             img.setImageMatrix(matrix);
